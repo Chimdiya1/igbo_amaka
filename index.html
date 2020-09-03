@@ -23,22 +23,22 @@
                 
                 <ul class="menu-nav">
                     <li class="menu-nav__item">
-                        <a href='/how-it-works' class="menu-nav__link">
+                        <a href='#features' class="menu-nav__link">
                         Features
                         </a>
                     </li>
                     <li class="menu-nav__item">
-                        <a href='/listings' class="menu-nav__link">
+                        <a href='#screenshots' class="menu-nav__link">
                         Screenshots
                         </a>
                     </li>
                     <li class="menu-nav__item">
-                        <a href='/listings' class="menu-nav__link">
+                        <a href='#download-now' class="menu-nav__link download">
                         Download
                         </a>
                     </li>
                     <li class="menu-nav__item">
-                        <a href='/contact' class="menu-nav__link">
+                        <a href='#contact' class="menu-nav__link">
                         Contact 
                         </a>
                     </li>
@@ -66,7 +66,7 @@
         </section>
         <img class="vector" src="./assets/Vector1.svg" alt="">
     </div>
-    <section class="features">
+    <section id="features" class="features">
         <h4>Features</h4>
         <div class="features__content">
             <img class="screen2" src="./assets/screen2.png" alt="screen2">
@@ -120,7 +120,7 @@
         </div>
         
     </section>
-    <section class="screenshots">
+    <section id="screenshots" class="screenshots">
         <h4>Screenshots</h4>
         <div class="show">
             <img class="show--img" src="./assets/screen4.png" alt="">
@@ -130,7 +130,7 @@
             <img class="show--img" src="./assets/screen7.png" alt="">
         </div>
     </section>
-    <section class="download-now">
+    <section id="download-now"  class="download-now">
         <h5>Get the App on your Android</h5>
         <h2>Download Now</h2>
         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
@@ -144,7 +144,7 @@
             </div>
         </button>
     </section>
-    <section class="contact">
+    <section id="contact" class="contact">
         <h4>Contact</h4>
         <div class="contact__box">
             <div>
@@ -157,6 +157,33 @@
     <footer>
         Copyright @2020 All rights reserved
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
     <script src="nav.js"></script>
 </body>
 </html>

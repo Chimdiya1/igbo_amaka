@@ -23,6 +23,12 @@
   list-style-type: none;
 }
 
+@media screen and (min-width: 800px) and (max-width: 1150px) {
+  .menu-nav {
+    width: 40vw;
+  }
+}
+
 .menu-nav__link {
   font-size: 16px;
   text-decoration: none;
@@ -34,18 +40,30 @@
   transition: all 0.3s ease-in-out;
 }
 
+.menu-nav__link.download {
+  background-color: #fff;
+  color: black;
+  padding: .5rem 1.2rem;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.menu-nav__link.download:hover {
+  background: #FF9249;
+}
+
 .menu-nav__link.homel {
   font-family: 'Merienda One', sans-serif;
   font-size: 1.5em;
   position: absolute;
-  left: 50px;
+  left: 10%;
   top: 0;
   margin: auto;
   padding-top: .7em;
 }
 
 .menu-nav__link:hover {
-  color: #ff652f;
+  color: black;
 }
 
 @media screen and (max-width: 800px) {
@@ -180,7 +198,7 @@
     transition: all 0.3s ease-in-out;
   }
   .nav .menu-nav__link:hover {
-    color: #ff652f;
+    color: black;
   }
   .menu-nav__item:nth-child(1) {
     -webkit-transition-delay: 0.2s;
@@ -268,6 +286,7 @@ h4 {
   line-height: 16px;
   color: #471437;
   margin-bottom: -3px;
+  text-align: left;
 }
 
 .get-it div h6 {
@@ -300,7 +319,7 @@ h4 {
 
 .home section div h2 {
   font-size: 5em;
-  line-height: 75px;
+  line-height: 80px;
   color: white;
   width: 75%;
 }

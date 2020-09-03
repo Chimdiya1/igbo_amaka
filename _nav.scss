@@ -22,6 +22,9 @@ $secondary-color: #ff652f;
     align-items: center;
     justify-content: space-between;
     width: 30vw;
+    @media screen and (min-width:800px) and (max-width:1150px){
+      width: 40vw;  
+    }
     height: 10vh;
     margin-left:auto;
     margin-right: 80px;
@@ -34,18 +37,27 @@ $secondary-color: #ff652f;
         font-weight: 300;
         color: white;
         @include transition-ease;
-        
+        &.download{
+          background-color: #fff;
+          color: black;
+          padding: .5rem 1.2rem;
+          height: 30px;
+          border-radius: 10px;
+          &:hover{
+            background: #FF9249;
+          }
+        }
         &.homel{
             font-family: 'Merienda One', sans-serif;
             font-size: 1.5em;
             position: absolute;
-            left: 50px;
+            left: 10%;
             top: 0;
             margin: auto;
             padding-top: .7em;
         }
         &:hover{
-            color: $secondary-color;
+            color: black;
         }
     }
 }
@@ -163,7 +175,7 @@ $secondary-color: #ff652f;
         @include transition-ease;
 
         &:hover{
-            color: $secondary-color;
+            color: black;
         }
     }
   }

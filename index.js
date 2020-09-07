@@ -76,7 +76,6 @@ const scene2 = new ScrollMagic.Scene({
   offset: offset,
   reverse: false,
 })
-  .addIndicators()
   .setTween(imagesTL)
   .addTo(controller);
 

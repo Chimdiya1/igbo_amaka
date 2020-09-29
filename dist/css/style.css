@@ -52,6 +52,14 @@
   background: #FF9249;
 }
 
+@media screen and (max-width: 800px) {
+  .menu-nav__link.download {
+    padding: 2rem 0;
+    background: none;
+    height: auto;
+  }
+}
+
 .menu-nav__link.homel {
   font-family: 'Merienda One', sans-serif;
   font-size: 1.5em;
@@ -405,6 +413,7 @@ h4 {
 .features {
   min-height: 100vh;
   padding: 2em 6em;
+  overflow-x: hidden;
 }
 
 .features h4 {

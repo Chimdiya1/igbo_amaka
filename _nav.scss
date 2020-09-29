@@ -46,6 +46,11 @@ $secondary-color: #ff652f;
           &:hover{
             background: #FF9249;
           }
+          @media screen and (max-width:800px){
+            padding: 2rem 0;
+            background:none ;
+            height: auto;
+          }
         }
         &.homel{
             font-family: 'Merienda One', sans-serif;
